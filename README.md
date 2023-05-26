@@ -4,8 +4,7 @@ This project provides a simple pattern for building and deployment of Docker con
 
 Containers built using this project can be run locally or on [EC2](https://aws.amazon.com/ec2), [ECS](https://aws.amazon.com/ecs), [EKS](https://aws.amazon.com/eks), [Fargate](https://aws.amazon.com/fargate), [AWS Batch](https://aws.amazon.com/batch), or [AWS Lambda](https://aws.amazon.com/lambda) just by configuring the target orchestrator ( [`./config.sh TO`](config.sh) ) and executing [`./run.sh`](run.sh).
 
-<div align="center"><img src="docs/img/aws-do-docker-flow.png" alt="workflow" width="80%" /></div>
-<div align="center">Fig. 1 - Container workflow</div>
+![image](https://github.com/Harris-Nazir/AWS-Docker/assets/118135277/ff80f3ec-2aa2-4ad7-b58e-a12fc34a44f1)
 
 ## Prerequisites
 The following are minimum requirements to use this project:
@@ -220,23 +219,3 @@ Batch:
 EKS/kubernetes:
 * In your EKS cluster [provision a node group](https://docs.aws.amazon.com/eks/latest/userguide/create-managed-node-group.html) of instances with the desired GPU type
 * Modify the deployment template [`to/kubernetes/template/020-deployment.yaml`](to/kubernetes/template/020-deployment.yaml), uncomment lines 32-36, specifying container resource limit `nvidia.com/gpu:`, and set the desired number of GPUs for your container.
-
-## License
-This repository is released under the MIT-0 License. See the [LICENSE](LICENSE) file for details.
-
-## References
-
-* [Docker](https://docker.com)
-* [Docker Compose](https://docs.docker.com/compose/)
-* [Docker Swarm](https://docs.docker.com/engine/swarm/)
-* [Kubernetes](https://kubernetes.io)
-* [Amazon Web Services (AWS)](https://aws.amazon.com/)
-* [Amazon EC2](https://aws.amazon.com/ec2)
-* [Amazon EC2 Instance Types](https://aws.amazon.com/ec2/instance-types/)
-* [AWS Lambda](https://aws.amazon.com/lambda/)
-* [Amazon Elastic Container Service (ECS)](https://aws.amazon.com/ecs)
-* [Amazon Elastic Kubernetes Service (EKS)](https://aws.amazon.com/eks)
-* [AWS Batch](https://aws.amazon.com/batch)
-* [AWS Fargate](https://aws.amazon.com/fargate)
-* [Depend on Docker Project](https://github.com/iankoulski/depend-on-docker)
-* [DockerCon 2021 Presentation](https://www.docker.com/dockercon-live/2021/content/Videos/qYmjYNgD27hS8559G)
